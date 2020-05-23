@@ -1,24 +1,9 @@
-<img src="https://static.begin.app/node-minimal/readme-banner.png" width="553">
+## demo of a scheduled ruby function
 
-[![Begin build status](https://buildstatus.begin.app/goat-s7g/status.svg)](https://begin.com)
+this is a beta feature! we're still baking it so please forgive some rough edges:
 
-A simple app with the minimum necessary file structure to get started on Begin.
-
-## Deploy your own
-
-[![Deploy to Begin](https://static.begin.com/deploy-to-begin.svg)](https://begin.com/apps/create?template=https://github.com/begin-examples/node-minimal)
-
-Deploy your own clone of this app to Begin!
-
-## Getting started
-
-- Start the local dev server: `npm start`
-- Lint your code: `npm run lint` (after you've installed a linter, of course)
-- Run your tests: `npm t` (don't forget to write some!)
-
-## Reference
-
-- [Quickstart](https://docs.begin.com/en/guides/quickstart/) - basics on working locally, project structure, deploying, and accessing your Begin app
-- [Creating new routes](https://docs.begin.com/en/functions/creating-new-functions) - basics on expanding the capabilities of your app
-
-Head to [docs.begin.com](https://docs.begin.com/) to learn more!
+- ui is still not available but if you navigate to /apps/myappID/scheduled you can see it
+- the path `src/scheduled/[name of function]` is manditory for the moment but will be configurable in the future
+- `.arc-config` can adjust `runtime` to any AWS Lambda supported runtime (node, python, ruby, .net, java and go) or `deno`
+- `.arc-config` can adjust `timeout` to any AWS Lambda supported timeout
+- the `@begin` pragma in `.arc` lets you set any shell commands you want for `lint`, `build` and `test`
